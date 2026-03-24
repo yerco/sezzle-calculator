@@ -233,7 +233,6 @@ These are deliberate omissions, not oversights:
 - **Persistence** — swap the in-memory `History` for a storage interface with a DB-backed implementation. The injection pattern already supports this without touching handlers.
 - **History pagination** — `GET /history?limit=20&offset=0`.
 - **Auth** — session-scoped history so each user sees only their own calculations.
-- **Handler/middleware tests** — integration-style tests hitting the HTTP layer with `httptest`, asserting on status codes and response bodies.
 - **Structured logging** — `slog` (stdlib, Go 1.21+) for request logging and observability.
 - **CI pipeline** — GitHub Actions running `go test ./...` and `npm run test` on every push.
 
