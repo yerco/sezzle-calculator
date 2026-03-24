@@ -238,11 +238,15 @@ These are deliberate omissions, not oversights:
 
 ---
 
-## AI Tooling
+## AI Tooling & Prompts Used
 
 This project was built using Claude (Anthropic) as a coding assistant, in line with the assignment's permission to use AI tools.
 
-Claude was used to accelerate Go implementation and generate test scaffolding. Architecture decisions, pattern selection, error semantics, and code review were mine throughout.
+The main initialization prompt:
+
+> "...suggest how to implement Strategy pattern for arithmetic operations, and Memento pattern for GET /history, middleware for input validation. Give me a scaffolding step by step starting with backend. Ask me before making any major architectural decisions."
+
+Subsequent interactions were iterative — reviewing generated code, identifying gaps (missing HTTP-layer tests, stricter validation, Docker `VITE_API_URL` fix), and directing corrections. The architectural decisions, pattern selection, and final code review were mine throughout.
 
 I treat AI the same way I'd treat a fast junior engineer: useful for execution speed, needs direction on trade-offs, and everything it produces gets reviewed before it ships.
 
